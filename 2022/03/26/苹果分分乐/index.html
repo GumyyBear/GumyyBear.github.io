@@ -79,13 +79,15 @@
 
 
 
+<meta name="description" content="题目描述现在有 1023 个苹果，请你把它分成 10 堆，请给出一种分法，满足要求：当需要取得 0～1023 中任意数目的苹果时，必须直接从这 10 堆苹果中直接取出几堆，使得取出几堆苹果的总数刚好满足要求。 思考题意即为把 1023 个苹果分成十份，使得十份的排列组合能够覆盖 1 ~ 1023 全部数字。而    11023 &#x3D; 2 ^ 10 - 1不禁令人遐想。但是其中的奥妙仿佛还不能看清，我">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://example.com/2022/03/25/test-my-site/index.html">
+<meta property="og:title" content="苹果分分乐">
+<meta property="og:url" content="http://example.com/2022/03/26/%E8%8B%B9%E6%9E%9C%E5%88%86%E5%88%86%E4%B9%90/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="题目描述现在有 1023 个苹果，请你把它分成 10 堆，请给出一种分法，满足要求：当需要取得 0～1023 中任意数目的苹果时，必须直接从这 10 堆苹果中直接取出几堆，使得取出几堆苹果的总数刚好满足要求。 思考题意即为把 1023 个苹果分成十份，使得十份的排列组合能够覆盖 1 ~ 1023 全部数字。而    11023 &#x3D; 2 ^ 10 - 1不禁令人遐想。但是其中的奥妙仿佛还不能看清，我">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-25T07:24:18.000Z">
-<meta property="article:modified_time" content="2022-03-25T07:24:18.100Z">
+<meta property="article:published_time" content="2022-03-26T13:26:01.000Z">
+<meta property="article:modified_time" content="2022-03-27T13:48:00.526Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -117,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2022/03/25/test-my-site/"/>
+  <link rel="canonical" href="http://example.com/2022/03/26/苹果分分乐/"/>
 
 
 
 
 
-  <title>test_my_site | Hexo</title>
+  <title>苹果分分乐 | Hexo</title>
   
 
 
@@ -230,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/25/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/26/%E8%8B%B9%E6%9E%9C%E5%88%86%E5%88%86%E4%B9%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -247,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test_my_site</h1>
+          <h1 class="post-title" itemprop="name headline">苹果分分乐</h1>
         
 
         <div class="post-meta">
@@ -259,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-03-25T15:24:18+08:00">
-                2022-03-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-03-26T21:26:01+08:00">
+                2022-03-26
               </time>
             
 
@@ -297,7 +299,17 @@
       
 
       
-        
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>现在有 1023 个苹果，请你把它分成 10 堆，请给出一种分法，满足要求：当需要取得 0～1023 中任意数目的苹果时，必须直接从这 10 堆苹果中直接取出几堆，使得取出几堆苹果的总数刚好满足要求。</p>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>题意即为把 1023 个苹果分成十份，使得十份的排列组合能够覆盖 1 ~ 1023 全部数字。而<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1023 = 2 ^ 10 - 1</span><br></pre></td></tr></table></figure><br>不禁令人遐想。但是其中的奥妙仿佛还不能看清，我们从小到大开始逐个分析。</p>
+<blockquote>
+<p>首先，1 是必须要取到的，所以我们必须S单独分一堆苹果为 1 个。接下来到 2 ，第一堆无法构成 2 个苹果，所以毫无疑问，第二堆需要 2 个苹果。接下来我们需要凑到 3 个苹果，很简单，只需要把前两堆凑在一起，就足够了。然后来到四个苹果的情况，我们发现前面两堆加起来<em>只能够到 3 个苹果</em>。所以第三堆就是 4 个苹果。而前两堆苹果可以实现 1 ~ 3 的全覆盖，加上第三堆，<em>自然能覆盖 4 ~ 7 的数字</em>。理所应当想到第四堆苹果应当分为 8 个。</p>
+</blockquote>
+<h2 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h2><p>到此为止，我们应当发现其中的规律，并且可以作出大胆的假设了。分成的十堆苹果应该分别为<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">2 ^ (1 - 1)</span><br><span class="line">2 ^ (2 - 1)</span><br><span class="line">2 ^ (3 - 1)</span><br><span class="line">2 ^ (4 - 1)</span><br><span class="line">2 ^ (5 - 1)</span><br><span class="line">...</span><br><span class="line">2 ^ (10 - 1)</span><br></pre></td></tr></table></figure></p>
+<h2 id="求证"><a href="#求证" class="headerlink" title="求证"></a>求证</h2><p>接下来给出证明。对于等比数列的求和可知，<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = 2 ^ (n - 1)</span><br><span class="line">S = 2 ^ n - 1</span><br></pre></td></tr></table></figure><br>对于前 n - 1 堆苹果，能覆盖的范围是 2 ^ (n - 1) - 1 ，第 n 堆苹果有 2 ^ (n - 1) 个，那么前 n 堆苹果能覆盖的范围即为 2 ^ n - 1，与公式相一致，根据数学归纳法可知其正确性。</p>
+<h2 id="推广"><a href="#推广" class="headerlink" title="推广"></a>推广</h2><p>综上所述，若将 2 ^ n - 1 个苹果分为 n 堆满足题目需求的话，只需将苹果按照等比数列分为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2 ^ (1 - 1)</span><br><span class="line">2 ^ (2 - 1)</span><br><span class="line">...</span><br><span class="line">2 ^ (n - 1)</span><br></pre></td></tr></table></figure>
+<p>即可满足需求。</p>
+
       
     </div>
     
@@ -317,22 +329,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2022/03/25/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -381,8 +377,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -397,7 +402,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -424,6 +429,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text">思考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%81%87%E8%AE%BE"><span class="nav-number">3.</span> <span class="nav-text">假设</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%82%E8%AF%81"><span class="nav-number">4.</span> <span class="nav-text">求证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E5%B9%BF"><span class="nav-number">5.</span> <span class="nav-text">推广</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
