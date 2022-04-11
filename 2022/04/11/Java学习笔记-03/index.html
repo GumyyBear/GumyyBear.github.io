@@ -87,7 +87,7 @@
 <meta property="og:description" content="本文摘要 方法 方法的重载 数组及其静态和动态初始化">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-11T13:25:16.000Z">
-<meta property="article:modified_time" content="2022-04-11T14:03:26.435Z">
+<meta property="article:modified_time" content="2022-04-11T14:06:35.223Z">
 <meta property="article:author" content="Gumyy Bear">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -346,7 +346,10 @@
 </ul>
 <h2 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h2><p>方法的重载，即<strong>overload</strong>。<br>特征：</p>
 <ul>
-<li>多个方法的名称一致，但是参数列表不同。<br>参数列表不同的具体描述：</li>
+<li>多个方法的名称一致，但是参数列表不同。</li>
+</ul>
+<p>参数列表不同的具体描述：</p>
+<ul>
 <li>参数<strong>个数</strong>不同</li>
 <li>参数<strong>类型</strong>不同</li>
 <li>参数类型<strong>顺序</strong>不同</li>
@@ -354,10 +357,12 @@
 <h3 id="方法的重载的使用范例"><a href="#方法的重载的使用范例" class="headerlink" title="方法的重载的使用范例"></a>方法的重载的使用范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure>
 <p>按住ctrl左键单击它（在_IDEA中）就能看到它的原型。</p>
 <h2 id="数组及其静态和动态初始化"><a href="#数组及其静态和动态初始化" class="headerlink" title="数组及其静态和动态初始化"></a>数组及其静态和动态初始化</h2><h3 id="数组动态初始化"><a href="#数组动态初始化" class="headerlink" title="数组动态初始化"></a>数组动态初始化</h3><p> 动态初始化：指定数组的大小。<br> 定义格式：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名称 = new 数据类型[数组长度];</span><br><span class="line">or</span><br><span class="line">数据类型[] 数组名称;</span><br><span class="line">数组名称 = new 数据类型[数组长度];</span><br></pre></td></tr></table></figure><br> 左侧的数据类型表明了数组的数据类型，而一对中括号[]表明这是数组，右侧的new表明创建数组的动作。</p>
-<h3 id="数组的静态初始化"><a href="#数组的静态初始化" class="headerlink" title="数组的静态初始化"></a>数组的静态初始化</h3><p> 静态初始化：指定数组的内容。<br> 定义格式：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名称 = new 数据类型[] &#123;元素1, 元素2, ...&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="数组的静态初始化"><a href="#数组的静态初始化" class="headerlink" title="数组的静态初始化"></a>数组的静态初始化</h3><p>静态初始化：指定数组的内容。<br>定义格式：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名称 = new 数据类型[] &#123;元素1, 元素2, ...&#125;;</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>静态初始化会自动推算数组长度。<br>静态初始化的省略格式 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名称 = &#123;&#125;; </span><br><span class="line">or</span><br><span class="line">数据类型[] 数组名称;</span><br><span class="line">数组名称 = new 数据类型[] &#123;&#125;;</span><br></pre></td></tr></table></figure>
-注意事项：</li>
+<li>静态初始化会自动推算数组长度。</li>
+</ul>
+<p>静态初始化的省略格式<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名称 = &#123;&#125;; </span><br><span class="line">or</span><br><span class="line">数据类型[] 数组名称;</span><br><span class="line">数组名称 = new 数据类型[] &#123;&#125;;</span><br></pre></td></tr></table></figure><br>注意事项：</p>
+<ul>
 <li>动态和静态初始化都可以分布进行。</li>
 <li>静态初始化分布进行时不能使用省略格式。</li>
 </ul>
