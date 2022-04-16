@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="本文摘要 使用命令提示符运行.java JAVA语言的跨平台性 JDK、JRE、JVM">
+<meta name="description" content="本文摘要 使用命令提示符运行.java JAVA语言的跨平台性 JDK、JRE、JVM Java基本语句的学习 _IDEA安装配置 _IDEA常用快捷操作 MOBILE-AI招新题-99乘法表  方法   方法的重载 数组及其静态和动态初始化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java学习笔记-01">
 <meta property="og:url" content="http://example.com/2022/04/10/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-01/index.html">
 <meta property="og:site_name" content="Bear_Blog">
-<meta property="og:description" content="本文摘要 使用命令提示符运行.java JAVA语言的跨平台性 JDK、JRE、JVM">
+<meta property="og:description" content="本文摘要 使用命令提示符运行.java JAVA语言的跨平台性 JDK、JRE、JVM Java基本语句的学习 _IDEA安装配置 _IDEA常用快捷操作 MOBILE-AI招新题-99乘法表  方法   方法的重载 数组及其静态和动态初始化">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-10T13:03:21.000Z">
-<meta property="article:modified_time" content="2022-04-10T13:47:33.429Z">
+<meta property="article:modified_time" content="2022-04-16T02:11:46.958Z">
 <meta property="article:author" content="Gumyy Bear">
 <meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
@@ -334,6 +334,16 @@
 <li>使用命令提示符运行.java</li>
 <li>JAVA语言的跨平台性</li>
 <li>JDK、JRE、JVM</li>
+<li>Java基本语句的学习</li>
+<li>_IDEA安装配置</li>
+<li>_IDEA常用快捷操作</li>
+<li>MOBILE-AI招新题-99乘法表</li>
+<li><ul>
+<li>方法</li>
+</ul>
+</li>
+<li>方法的重载</li>
+<li>数组及其静态和动态初始化</li>
 </ul>
 <span id="more"></span>
 
@@ -348,6 +358,48 @@
 <h2 id="JRE-、-JDK-、-JVM"><a href="#JRE-、-JDK-、-JVM" class="headerlink" title="JRE 、 JDK 、 JVM"></a>JRE 、 JDK 、 JVM</h2><h1 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h1><p>JRE ，即 Java Runtime Environment ，是 Java 程序运行时的环境，包括了 JVM 和运行时所需要的核心类库。</p>
 <h1 id="JDk"><a href="#JDk" class="headerlink" title="JDk"></a>JDk</h1><p>JDk ，即 Java Development Kit ， 是 Java 程序开发包，包含了 JRE 和开发工具。</p>
 <h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><p>就是Java虚拟机嘛。</p>
+<h2 id="Java基本语句的学习"><a href="#Java基本语句的学习" class="headerlink" title="Java基本语句的学习"></a>Java基本语句的学习</h2><p>主要的语句和 C 语言中的大同小异，但是遇到了一些框架性的东西，先记录下来：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class FileName&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>main 程序貌似要这么写。具体含义仍未明白，继续学习。</p>
+<h2 id="IDEA安装配置"><a href="#IDEA安装配置" class="headerlink" title="_IDEA安装配置"></a>_IDEA安装配置</h2><p>从官网下载了_IDEA，按照步骤安装完成。<br>_IDEA的项目结构：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">project &#123;  module &#123;  package &#123; .... &#125;  &#125;  &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>项目</strong>中包含<strong>模块</strong>，然后里面有若干个<strong>背包</strong>，包里装着<strong>类（class）</strong>，不清楚类是什么东西，继续学习。</p>
+<h2 id="IDEA常用快捷操作"><a href="#IDEA常用快捷操作" class="headerlink" title="_IDEA常用快捷操作"></a>_IDEA常用快捷操作</h2><p>常用的快捷键：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Alt + Enter                 导入包，自动修正代码</span><br><span class="line">Ctrl + Alt + L              格式化代码</span><br><span class="line">Alt + Shift + 上下箭头       移动当前代码行</span><br><span class="line">Ctrl + Shift + F9           更新内容（？）</span><br><span class="line">Ctrl + Shift + F10          运行main</span><br></pre></td></tr></table></figure>
+<p>常用的快捷补全：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sout</span><br><span class="line">psvm</span><br><span class="line">n.fori</span><br></pre></td></tr></table></figure>
+
+<h2 id="MOBILE-AI招新题-99乘法表"><a href="#MOBILE-AI招新题-99乘法表" class="headerlink" title="MOBILE-AI招新题-99乘法表"></a>MOBILE-AI招新题-99乘法表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class mutipy &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int i, j;</span><br><span class="line">        <span class="keyword">for</span>(i = 1; i &lt;= 9; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j = 1; j &lt;= i; j++)&#123;</span><br><span class="line">                System.out.print(j);</span><br><span class="line">                System.out.print(<span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">                System.out.print(i);</span><br><span class="line">                System.out.print(<span class="string">&#x27;=&#x27;</span>);</span><br><span class="line">                System.out.print(i * j);</span><br><span class="line">                System.out.print(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>遇到的问题：这个print不晓得怎么一行输出一条算式，用 + 连接的话就变成了一个 int 类型了，尚未解决。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 方法名称(参数类型 参数名称, ...)&#123;</span><br><span class="line">    方法体</span><br><span class="line">    <span class="built_in">return</span> 返回值;</span><br><span class="line">&#125;</span><br><span class="line">示例：</span><br><span class="line">public static void 方法名称() &#123;</span><br><span class="line">    方法体</span><br><span class="line">&#125;</span><br><span class="line">//方法名称命名使用小驼峰规则</span><br></pre></td></tr></table></figure>
+<p>方法的使用类似与C语言中的函数。</p>
+<h3 id="方法使用的注意事项"><a href="#方法使用的注意事项" class="headerlink" title="方法使用的注意事项"></a>方法使用的注意事项</h3><ul>
+<li><strong>方法</strong>应该定义在<strong>类</strong>当中。</li>
+<li>方法中不能再定义方法，即方法的定义不能嵌套。</li>
+<li>方法若有返回值，必须写上 “return 返回值” 。</li>
+</ul>
+<h2 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h2><p>方法的重载，即<strong>overload</strong>。<br>特征：</p>
+<ul>
+<li>多个方法的名称一致，但是参数列表不同。</li>
+</ul>
+<p>参数列表不同的具体描述：</p>
+<ul>
+<li>参数<strong>个数</strong>不同</li>
+<li>参数<strong>类型</strong>不同</li>
+<li>参数类型<strong>顺序</strong>不同</li>
+</ul>
+<h3 id="方法的重载的使用范例"><a href="#方法的重载的使用范例" class="headerlink" title="方法的重载的使用范例"></a>方法的重载的使用范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure>
+<p>按住ctrl左键单击它（在_IDEA中）就能看到它的原型。</p>
+<h2 id="数组及其静态和动态初始化"><a href="#数组及其静态和动态初始化" class="headerlink" title="数组及其静态和动态初始化"></a>数组及其静态和动态初始化</h2><h3 id="数组动态初始化"><a href="#数组动态初始化" class="headerlink" title="数组动态初始化"></a>数组动态初始化</h3><p> 动态初始化：指定数组的大小。<br> 定义格式：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名称 = new 数据类型[数组长度];</span><br><span class="line">or</span><br><span class="line">数据类型[] 数组名称;</span><br><span class="line">数组名称 = new 数据类型[数组长度];</span><br></pre></td></tr></table></figure><br> 左侧的数据类型表明了数组的数据类型，而一对中括号[]表明这是数组，右侧的new表明创建数组的动作。</p>
+<h3 id="数组的静态初始化"><a href="#数组的静态初始化" class="headerlink" title="数组的静态初始化"></a>数组的静态初始化</h3><p>静态初始化：指定数组的内容。<br>定义格式：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名称 = new 数据类型[] &#123;元素1, 元素2, ...&#125;;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>静态初始化会自动推算数组长度。</li>
+</ul>
+<p>静态初始化的省略格式<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">数据类型[] 数组名称 = &#123;&#125;; </span><br><span class="line">or</span><br><span class="line">数据类型[] 数组名称;</span><br><span class="line">数组名称 = new 数据类型[] &#123;&#125;;</span><br></pre></td></tr></table></figure><br>注意事项：</p>
+<ul>
+<li>动态和静态初始化都可以分布进行。</li>
+<li>静态初始化分布进行时不能使用省略格式。</li>
+</ul>
 
       
     </div>
@@ -378,18 +430,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/03/27/%E5%86%9C%E6%B0%91%E4%BC%AF%E4%BC%AF/" rel="next" title="农民伯伯">
-                <i class="fa fa-chevron-left"></i> 农民伯伯
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/04/10/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-02/" rel="prev" title="Java学习笔记-02">
-                Java学习笔记-02 <i class="fa fa-chevron-right"></i>
+              <a href="/2022/04/12/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E6%B0%B4%E7%9B%90%E7%AF%87/" rel="prev" title="健身营养学-水盐篇">
+                健身营养学-水盐篇 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -471,7 +519,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -484,7 +532,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -517,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">本文摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E8%BF%90%E8%A1%8C-java"><span class="nav-number">2.</span> <span class="nav-text">使用命令提示符运行.java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA%E8%AF%AD%E8%A8%80%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">JAVA语言的跨平台性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JRE-%E3%80%81-JDK-%E3%80%81-JVM"><span class="nav-number">4.</span> <span class="nav-text">JRE 、 JDK 、 JVM</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JRE"><span class="nav-number"></span> <span class="nav-text">JRE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDk"><span class="nav-number"></span> <span class="nav-text">JDk</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM"><span class="nav-number"></span> <span class="nav-text">JVM</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">本文摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E8%BF%90%E8%A1%8C-java"><span class="nav-number">2.</span> <span class="nav-text">使用命令提示符运行.java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA%E8%AF%AD%E8%A8%80%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">JAVA语言的跨平台性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JRE-%E3%80%81-JDK-%E3%80%81-JVM"><span class="nav-number">4.</span> <span class="nav-text">JRE 、 JDK 、 JVM</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JRE"><span class="nav-number"></span> <span class="nav-text">JRE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDk"><span class="nav-number"></span> <span class="nav-text">JDk</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM"><span class="nav-number"></span> <span class="nav-text">JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">Java基本语句的学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">_IDEA安装配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">_IDEA常用快捷操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MOBILE-AI%E6%8B%9B%E6%96%B0%E9%A2%98-99%E4%B9%98%E6%B3%95%E8%A1%A8"><span class="nav-number">4.</span> <span class="nav-text">MOBILE-AI招新题-99乘法表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">5.1.</span> <span class="nav-text">方法的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">5.2.</span> <span class="nav-text">方法使用的注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD"><span class="nav-number">6.</span> <span class="nav-text">方法的重载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD%E7%9A%84%E4%BD%BF%E7%94%A8%E8%8C%83%E4%BE%8B"><span class="nav-number">6.1.</span> <span class="nav-text">方法的重载的使用范例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%8F%8A%E5%85%B6%E9%9D%99%E6%80%81%E5%92%8C%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">数组及其静态和动态初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">7.1.</span> <span class="nav-text">数组动态初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%9D%99%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">7.2.</span> <span class="nav-text">数组的静态初始化</span></a></li></ol></li></ol></div>
             
 
           </div>
