@@ -1,7 +1,7 @@
 # GumyyBear.github.io
 GummyBear_ww
 
-Welcome to GummyBear's github.
+Welcome to GummyBear's github's blog.
 Maybe you'll get what you want here.
 
 Or if you want to contact me:
