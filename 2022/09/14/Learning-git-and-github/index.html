@@ -79,11 +79,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bear_Blog">
-<meta property="og:url" content="http://example.com/index.html">
+<meta name="description" content="学习 Git 和 Github 的笔记。学习来源：廖雪峰的 Git 教程 安装 Git在 Linux 中安装 Git通过输入 $  git  来查看是否安装 Git。若没有，以 Ubuntu 为例，通过：$ sudo apt-get install git来安装 Git。 在 Windows 中安装 Git从 Git 官网直接下载安装程序即可。安装后打开 Git Bash， 输入： 12$ git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning git and github.">
+<meta property="og:url" content="http://example.com/2022/09/14/Learning-git-and-github/index.html">
 <meta property="og:site_name" content="Bear_Blog">
+<meta property="og:description" content="学习 Git 和 Github 的笔记。学习来源：廖雪峰的 Git 教程 安装 Git在 Linux 中安装 Git通过输入 $  git  来查看是否安装 Git。若没有，以 Ubuntu 为例，通过：$ sudo apt-get install git来安装 Git。 在 Windows 中安装 Git从 Git 官网直接下载安装程序即可。安装后打开 Git Bash， 输入： 12$ git">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-09-14T07:01:35.000Z">
+<meta property="article:modified_time" content="2022-09-15T16:46:41.386Z">
 <meta property="article:author" content="Gumyy Bear">
 <meta name="twitter:card" content="summary">
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/"/>
+  <link rel="canonical" href="http://example.com/2022/09/14/Learning-git-and-github/"/>
 
 
 
 
 
-  <title>Bear_Blog</title>
+  <title>Learning git and github. | Bear_Blog</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/09/14/Learning-git-and-github/" itemprop="url">Learning git and github.</a></h1>
+          <h1 class="post-title" itemprop="name headline">Learning git and github.</h1>
         
 
         <div class="post-meta">
@@ -328,9 +329,7 @@
       
 
       
-        
-          
-            <h2 id="学习-Git-和-Github-的笔记。"><a href="#学习-Git-和-Github-的笔记。" class="headerlink" title="学习 Git 和 Github 的笔记。"></a>学习 Git 和 Github 的笔记。</h2><p>学习来源：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰的 Git 教程</a></p>
+        <h2 id="学习-Git-和-Github-的笔记。"><a href="#学习-Git-和-Github-的笔记。" class="headerlink" title="学习 Git 和 Github 的笔记。"></a>学习 Git 和 Github 的笔记。</h2><p>学习来源：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰的 Git 教程</a></p>
 <h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><h5 id="在-Linux-中安装-Git"><a href="#在-Linux-中安装-Git" class="headerlink" title="在 Linux 中安装 Git"></a>在 Linux 中安装 Git</h5><p>通过输入 <code>$  git </code> 来查看是否安装 Git。<br>若没有，以 Ubuntu 为例，通过：<br><code>$ sudo apt-get install git</code><br>来安装 Git。</p>
 <h5 id="在-Windows-中安装-Git"><a href="#在-Windows-中安装-Git" class="headerlink" title="在 Windows 中安装 Git"></a>在 Windows 中安装 Git</h5><p>从 Git 官网直接下载安装程序即可。<br>安装后打开 Git Bash， 输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -499,8 +498,6 @@
 <h5 id="配置-Git-别名"><a href="#配置-Git-别名" class="headerlink" title="配置 Git 别名"></a>配置 Git 别名</h5><p>下列命令就是用 st 代替 status：<br><code>$ git config --global alias.st ’status’</code><br>其中， <code>--global</code> 参数是全局参数，这意味着这些命令在 <strong>这台电脑</strong> 下的所有 Git 仓库都适用。<br>配制文件实际上存放在 <code>.git/config</code> 文件中。而用户配置的 Git 配制文件则在 <strong>用户主目录</strong> 下的隐藏文件 <code>.gitconfig</code> 中。这意味着配置别名也可以直接修改这个文件。</p>
 <h3 id="Git-Cheat-Sheet"><a href="#Git-Cheat-Sheet" class="headerlink" title="Git Cheat Sheet"></a>Git Cheat Sheet</h3><p><a target="_blank" rel="noopener" href="https://liaoxuefeng.gitee.io/resource.liaoxuefeng.com/git/git-cheat-sheet.pdf">Git Cheat Sheet</a></p>
 
-          
-        
       
     </div>
     
@@ -517,136 +514,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/08/Across-The-Great-Wall/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/08/Across-The-Great-Wall/" itemprop="url">Across_The_Great_Wall</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-08T00:32:00+08:00">
-                2022-08-08
-              </time>
+              <a href="/2022/08/08/Across-The-Great-Wall/" rel="next" title="Across_The_Great_Wall">
+                <i class="fa fa-chevron-left"></i> Across_The_Great_Wall
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h2 id="基于-Hostwinds-的-Wireguard-搭建和-V2ray-一键安装脚本搭建"><a href="#基于-Hostwinds-的-Wireguard-搭建和-V2ray-一键安装脚本搭建" class="headerlink" title="基于 Hostwinds 的 Wireguard 搭建和 V2ray 一键安装脚本搭建"></a>基于 Hostwinds 的 Wireguard 搭建和 V2ray 一键安装脚本搭建</h2><p>  Written by: GummyBear  </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/08/08/Across-The-Great-Wall/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -656,1219 +545,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/03/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%87%83%E8%84%82%E8%BF%90%E5%8A%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/05/03/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%87%83%E8%84%82%E8%BF%90%E5%8A%A8/" itemprop="url">健身营养学-燃脂运动（上）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-05-03T10:52:48+08:00">
-                2022-05-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%81%A5%E8%BA%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">健身</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="本文摘要"><a href="#本文摘要" class="headerlink" title="本文摘要"></a>本文摘要</h2><ul>
-<li>过度训练</li>
-<li>燃脂的生理过程</li>
-<li>为运动供能的脂肪储备</li>
-<li>完美燃脂！</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/05/03/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%87%83%E8%84%82%E8%BF%90%E5%8A%A8/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E9%AB%98%E8%84%82%E4%BD%8E%E7%A2%B3%E9%A5%AE%E9%A3%9F%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E9%AB%98%E8%84%82%E4%BD%8E%E7%A2%B3%E9%A5%AE%E9%A3%9F%E6%B3%95/" itemprop="url">健身营养学-高脂低碳饮食法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-17T23:18:55+08:00">
-                2022-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%81%A5%E8%BA%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">健身</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="本文摘要"><a href="#本文摘要" class="headerlink" title="本文摘要"></a>本文摘要</h2><ul>
-<li>脂肪的摄入</li>
-<li>阿特金斯饮食法</li>
-<li>阿特金斯饮食法与其他饮食法比较</li>
-<li>低碳饮食法与运动</li>
-<li>阿特金斯饮食法的副作用</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E9%AB%98%E8%84%82%E4%BD%8E%E7%A2%B3%E9%A5%AE%E9%A3%9F%E6%B3%95/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%B1%BB%E8%84%82/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%B1%BB%E8%84%82/" itemprop="url">健身营养学-类脂</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-17T23:18:23+08:00">
-                2022-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%81%A5%E8%BA%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">健身</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="本文摘要"><a href="#本文摘要" class="headerlink" title="本文摘要"></a>本文摘要</h2><ul>
-<li>胆固醇</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%B1%BB%E8%84%82/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E8%84%82%E8%82%AA%E7%BB%AA%E8%AE%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E8%84%82%E8%82%AA%E7%BB%AA%E8%AE%BA/" itemprop="url">健身营养学-脂肪绪论</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-17T23:18:12+08:00">
-                2022-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%81%A5%E8%BA%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">健身</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="本文摘要"><a href="#本文摘要" class="headerlink" title="本文摘要"></a>本文摘要</h2><ul>
-<li>脂肪概述</li>
-<li>短链脂肪酸、中链脂肪酸</li>
-<li>长链脂肪酸</li>
-<li>反式脂肪酸</li>
-<li>睾酮</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/04/17/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E8%84%82%E8%82%AA%E7%BB%AA%E8%AE%BA/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E4%BB%A3%E7%B3%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/04/16/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E4%BB%A3%E7%B3%96/" itemprop="url">健身营养学-代糖</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-16T10:02:52+08:00">
-                2022-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%81%A5%E8%BA%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">健身</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="本文摘要"><a href="#本文摘要" class="headerlink" title="本文摘要"></a>本文摘要</h2><ul>
-<li>代糖概述</li>
-<li>代糖的副作用</li>
-<li>代糖的使用价值</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/04/16/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E4%BB%A3%E7%B3%96/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/14/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%A2%B3%E6%B0%B4%E9%A5%AE%E9%A3%9F%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/04/14/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%A2%B3%E6%B0%B4%E9%A5%AE%E9%A3%9F%E6%B3%95/" itemprop="url">健身营养学-碳水饮食法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-14T12:53:35+08:00">
-                2022-04-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%81%A5%E8%BA%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">健身</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="本文摘要"><a href="#本文摘要" class="headerlink" title="本文摘要"></a>本文摘要</h2><ul>
-<li>低脂高碳饮食法</li>
-<li>GI与GL</li>
-<li>力量训练者与GI和GL</li>
-<li>胰岛素</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/04/14/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%A2%B3%E6%B0%B4%E9%A5%AE%E9%A3%9F%E6%B3%95/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/12/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%A2%B3%E6%B0%B4%E7%BB%AA%E8%AE%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/04/12/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%A2%B3%E6%B0%B4%E7%BB%AA%E8%AE%BA/" itemprop="url">健身营养学-碳水绪论</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-12T18:37:03+08:00">
-                2022-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%81%A5%E8%BA%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">健身</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="本文摘要"><a href="#本文摘要" class="headerlink" title="本文摘要"></a>本文摘要</h2><ul>
-<li>常见的碳水化合物</li>
-<li>果糖</li>
-<li>膳食纤维</li>
-<li>丙酮酸</li>
-<li>碳水化合物与力量训练</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/04/12/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E7%A2%B3%E6%B0%B4%E7%BB%AA%E8%AE%BA/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/12/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E6%B0%B4%E7%9B%90%E7%AF%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/heart.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bear_Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/04/12/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E6%B0%B4%E7%9B%90%E7%AF%87/" itemprop="url">健身营养学-水盐篇</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-12T12:25:41+08:00">
-                2022-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%81%A5%E8%BA%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">健身</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="本文摘要"><a href="#本文摘要" class="headerlink" title="本文摘要"></a>本文摘要</h2><ul>
-<li>力量训练中的补液</li>
-<li>训练后的补液</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/04/12/%E5%81%A5%E8%BA%AB%E8%90%A5%E5%85%BB%E5%AD%A6-%E6%B0%B4%E7%9B%90%E7%AF%87/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
-  </nav>
-
 
 
           </div>
@@ -1876,6 +557,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1896,8 +581,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1961,6 +655,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0-Git-%E5%92%8C-Github-%E7%9A%84%E7%AC%94%E8%AE%B0%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">学习 Git 和 Github 的笔记。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Git"><span class="nav-number">1.1.</span> <span class="nav-text">安装 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9C%A8-Linux-%E4%B8%AD%E5%AE%89%E8%A3%85-Git"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">在 Linux 中安装 Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9C%A8-Windows-%E4%B8%AD%E5%AE%89%E8%A3%85-Git"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">在 Windows 中安装 Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">创建版本库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">Git 的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.1.</span> <span class="nav-text">文件管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-number">1.2.2.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">1.2.3.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-SSH-%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">通过 SSH 连接远程仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">远程仓库使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.4.</span> <span class="nav-text">分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Fast-Forward"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">Fast Forward</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">冲突处理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">分支管理策略</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Bug-%E5%88%86%E6%94%AF"><span class="nav-number">1.2.4.4.</span> <span class="nav-text">Bug 分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Feature-%E5%88%86%E6%94%AF"><span class="nav-number">1.2.4.5.</span> <span class="nav-text">Feature 分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C"><span class="nav-number">1.2.4.6.</span> <span class="nav-text">多人协作</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86"><span class="nav-number">1.2.5.</span> <span class="nav-text">标签管理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%97%B6%E8%BF%9E%E6%8E%A5-GitHub-%E5%92%8C-Gitee"><span class="nav-number">1.3.</span> <span class="nav-text">同时连接 GitHub 和 Gitee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-number">1.4.</span> <span class="nav-text">Git 自定义</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Git-%E4%B8%8A%E8%89%B2"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">Git 上色</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BF%BD%E7%95%A5%E7%89%B9%E6%AE%8A%E6%96%87%E4%BB%B6"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">忽略特殊文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Git-%E5%88%AB%E5%90%8D"><span class="nav-number">1.4.0.3.</span> <span class="nav-text">配置 Git 别名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Cheat-Sheet"><span class="nav-number">1.5.</span> <span class="nav-text">Git Cheat Sheet</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -2101,6 +811,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
