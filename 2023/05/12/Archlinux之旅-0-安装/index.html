@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Linux," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="从零开始的 Archlinux 世界Written By: GummyBear 参考文章：  在 VMware 中安装 ArchLinux  内容概览：  安装 磁盘分区 换源 pacman 常见命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Archlinux之旅 - 0.安装">
+<meta property="og:url" content="http://example.com/2023/05/12/Archlinux%E4%B9%8B%E6%97%85-0-%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="Bear_Blog">
+<meta property="og:description" content="从零开始的 Archlinux 世界Written By: GummyBear 参考文章：  在 VMware 中安装 ArchLinux  内容概览：  安装 磁盘分区 换源 pacman 常见命令">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/05/12/Archlinux%E4%B9%8B%E6%97%85-0-%E5%AE%89%E8%A3%85/1.png">
+<meta property="article:published_time" content="2023-05-12T07:58:04.000Z">
+<meta property="article:modified_time" content="2023-05-13T06:23:30.302Z">
+<meta property="article:author" content="Gumyy Bear">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/05/12/Archlinux%E4%B9%8B%E6%97%85-0-%E5%AE%89%E8%A3%85/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2023/05/12/Archlinux之旅-0-安装/"/>
+
+
+
+
+
+  <title>Archlinux之旅 - 0.安装 | Bear_Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bear_Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Where is the bear!?</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/12/Archlinux%E4%B9%8B%E6%97%85-0-%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/heart.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bear_Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Archlinux之旅 - 0.安装</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-05-12T15:58:04+08:00">
+                2023-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="从零开始的-Archlinux-世界"><a href="#从零开始的-Archlinux-世界" class="headerlink" title="从零开始的 Archlinux 世界"></a>从零开始的 Archlinux 世界</h2><p>Written By: GummyBear</p>
+<p>参考文章：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7092761463567155213">在 VMware 中安装 ArchLinux</a></li>
+</ul>
+<p>内容概览：</p>
+<ul>
+<li>安装</li>
+<li>磁盘分区</li>
+<li>换源</li>
+<li>pacman 常见命令</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="00-序言"><a href="#00-序言" class="headerlink" title="00 序言"></a>00 序言</h2><p>本系列文章的记录折腾 Archlinux 上的生产环境以及各种花里胡哨的东西来探索程序员的净土。</p>
+<p>笔者一开始使用的 Archlinux+KDE 没有做任何的优化，跟着别人的教程配置了 neovim 使用了一段时间，只能说能用，但是却没有很好的开发体验。于是痛定思痛，认认真真折腾一下 Archlinux。</p>
+<h2 id="01-Archlinux-安装"><a href="#01-Archlinux-安装" class="headerlink" title="01 Archlinux 安装"></a>01 Archlinux 安装</h2><h3 id="01x01-方案"><a href="#01x01-方案" class="headerlink" title="01x01 方案"></a>01x01 方案</h3><p>Archlinux + VMware</p>
+<h3 id="01x02-安装"><a href="#01x02-安装" class="headerlink" title="01x02 安装"></a>01x02 安装</h3><p>获取 Archlinux 官方镜像： <a target="_blank" rel="noopener" href="https://archlinux.org/download/">网络链接</a></p>
+<p>在 VMware Workstation 中新建虚拟机，使用下载好的镜像。下面展示本次创建用到的配置</p>
+<ul>
+<li>类型：自定义</li>
+<li>硬件兼容性：Workstation 16.x</li>
+<li>安装程序光盘映像文件：<em>选择下载好的镜像</em></li>
+<li>客户机操作系统：Linux</li>
+<li>版本：其他 Linux 5.x 内核 64 位</li>
+<li>虚拟机名称： ArchLinux</li>
+<li>位置：D:\Archlinux</li>
+<li>处理器配置：<br>宿主机的配置时 4 核 8 线程，所以这里选择虚拟机的配置为：<ul>
+<li>处理器数量： 2</li>
+<li>每个处理器的内核数量： 2</li>
+</ul>
+</li>
+<li>虚拟机内存分配： 4096 MB</li>
+<li>网络连接：使用网络地址转换 (NAT)</li>
+<li>SCSI 控制器：LSI Logic</li>
+<li>虚拟磁盘类型：SCSI</li>
+<li>磁盘：<ul>
+<li>创建新虚拟磁盘</li>
+<li>最大磁盘大小： 40 GB</li>
+<li>将虚拟磁盘拆分成多个文件</li>
+</ul>
+</li>
+</ul>
+<p>设置完成后就可以打开虚拟机啦！</p>
+<p>接下来不需要进行任何操作，等待 Archlinux 自行安装。</p>
+<p>安装后显示如下：<br><img src="/2023/05/12/Archlinux%E4%B9%8B%E6%97%85-0-%E5%AE%89%E8%A3%85/1.png"></p>
+<h3 id="01x03-分区"><a href="#01x03-分区" class="headerlink" title="01x03 分区"></a>01x03 分区</h3><ul>
+<li>方案 （Total 40 GB）<table>
+<thead>
+<tr>
+<th>分区名称</th>
+<th>大小</th>
+<th>作用</th>
+<th>分区盘标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/mnt</td>
+<td>33 G</td>
+<td>安装系统和软件</td>
+<td>/dev/sda1</td>
+</tr>
+<tr>
+<td>/boot</td>
+<td>1 G</td>
+<td>储存启动信息</td>
+<td>/dev/sda2</td>
+</tr>
+<tr>
+<td>/swap</td>
+<td>6 G</td>
+<td>交换分区</td>
+<td>/dev/sda3</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看分区状态</span></span><br><span class="line">lsblk</span><br><span class="line"></span><br><span class="line"><span class="comment"># 分区</span></span><br><span class="line"><span class="comment"># 按上面的方案分为 33G、1G、6G。</span></span><br><span class="line">cfdisk /dev/sda</span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式化分区</span></span><br><span class="line">mkfs.ext4 /dev/sda1</span><br><span class="line">mkfs.vfat -F32 /dev/sda2</span><br><span class="line">mkswap /dev/sda3</span><br><span class="line"></span><br><span class="line"><span class="comment"># 挂载分区</span></span><br><span class="line">mount /dev/sda1 /mnt</span><br><span class="line"><span class="built_in">mkdir</span> /mnt/boot</span><br><span class="line">mount /dev/sda2 /mnt/boot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启用交换区</span></span><br><span class="line">swapon /dev/sda3</span><br></pre></td></tr></table></figure>
+
+<h3 id="01x04-修改镜像源"><a href="#01x04-修改镜像源" class="headerlink" title="01x04 修改镜像源"></a>01x04 修改镜像源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/pacman.d/mirrorlist</span><br><span class="line"><span class="comment"># 删除除了中国以外的镜像源</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加清华源：</span></span><br><span class="line">Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/<span class="variable">$repo</span>/os/<span class="variable">$arch</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新镜像源</span></span><br><span class="line">pacman -Syy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装基本包</span></span><br><span class="line">pacstrap /mnt base base-devel linux linux-firmware dhcpcd</span><br></pre></td></tr></table></figure>
+
+<h3 id="01x05-配置-Fstab"><a href="#01x05-配置-Fstab" class="headerlink" title="01x05 配置 Fstab"></a>01x05 配置 Fstab</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成自动挂载分区的 fstab 文件，执行以下命令：</span></span><br><span class="line">genfstab -L /mnt &gt;&gt; /mnt/etc/fstab</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查是否正确</span></span><br><span class="line"><span class="built_in">cat</span> /mnt/etc/fstab</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="01x06-Chroot"><a href="#01x06-Chroot" class="headerlink" title="01x06 Chroot"></a>01x06 Chroot</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Chroot意为Change root，相当于把操纵权交给我们新安装（或已经存在）的Linux系统，执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行。如果以后我们的系统出现了问题，只要插入U盘并启动， 将我们的系统根分区挂载到了/mnt下（如果有efi分区也要挂载到/mnt/boot下），再通过这条命令就可以进入我们的系统进行修复操作。</span></span><br><span class="line">arch-chroot /mnt</span><br></pre></td></tr></table></figure>
+
+<h3 id="01x07-设置时区"><a href="#01x07-设置时区" class="headerlink" title="01x07 设置时区"></a>01x07 设置时区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br></pre></td></tr></table></figure>
+<h3 id="01x08-设置语言选项"><a href="#01x08-设置语言选项" class="headerlink" title="01x08 设置语言选项"></a>01x08 设置语言选项</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先装个 vim</span></span><br><span class="line">pacman -S vim</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置语言</span></span><br><span class="line">vim /etc/locale.gen</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消 zh_CN.UTF-8 en_US.UTF-8 UTF-8 的注释。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新</span></span><br><span class="line">locale-gen</span><br><span class="line"></span><br><span class="line">vim /etc/locale.conf</span><br><span class="line"><span class="comment"># 添加</span></span><br><span class="line">LANG=en_US.UTF-8</span><br></pre></td></tr></table></figure>
+
+<h3 id="01x09-配置主机网络名"><a href="#01x09-配置主机网络名" class="headerlink" title="01x09 配置主机网络名"></a>01x09 配置主机网络名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hostname</span><br><span class="line"><span class="comment"># 添加你的主机名</span></span><br><span class="line">gummyArch</span><br><span class="line"></span><br><span class="line">vim /etc/hosts</span><br><span class="line"><span class="comment"># 添加如下内容</span></span><br><span class="line">127.0.0.1     localhost</span><br><span class="line">::1           localhost</span><br><span class="line">127.0.1.1     gummyArch.localdomain    gummyArch</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="01x09-设置-root-密码"><a href="#01x09-设置-root-密码" class="headerlink" title="01x09 设置 root 密码"></a>01x09 设置 root 密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br><span class="line"><span class="comment"># &lt;your-pwd&gt;</span></span><br><span class="line"><span class="comment"># groot</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="01x0A-安装系统引导工具-grub-，并生成引导文件"><a href="#01x0A-安装系统引导工具-grub-，并生成引导文件" class="headerlink" title="01x0A 安装系统引导工具 grub ，并生成引导文件"></a>01x0A 安装系统引导工具 <code>grub</code> ，并生成引导文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pacman -S grub</span><br><span class="line">grub-install --force /dev/sda</span><br><span class="line">grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
+
+<h3 id="01x0B-配置网络"><a href="#01x0B-配置网络" class="headerlink" title="01x0B 配置网络"></a>01x0B 配置网络</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> dhcpcd.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="01x0C-退出重启"><a href="#01x0C-退出重启" class="headerlink" title="01x0C 退出重启"></a>01x0C 退出重启</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br><span class="line">umount -R /mnt</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<p>至此， Archlinux 安装完成！</p>
+<h2 id="02-基础配置"><a href="#02-基础配置" class="headerlink" title="02 基础配置"></a>02 基础配置</h2><h3 id="02x01-创建用户"><a href="#02x01-创建用户" class="headerlink" title="02x01 创建用户"></a>02x01 创建用户</h3><p>先使用 root 用户登录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -m -G wheel &lt;username&gt;</span><br><span class="line">passwd &lt;username&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="02x02-配置-sudo"><a href="#02x02-配置-sudo" class="headerlink" title="02x02 配置 sudo"></a>02x02 配置 sudo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pacman -S sudo</span><br><span class="line"><span class="built_in">ln</span> -s /usr/bin/vim /usr/bin/vi</span><br><span class="line">visudo</span><br><span class="line"><span class="comment"># 去掉 # %wheel ALL=(ALL)ALL 的注释。</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h3 id="02x03-安装常用的应用"><a href="#02x03-安装常用的应用" class="headerlink" title="02x03 安装常用的应用"></a>02x03 安装常用的应用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># open-vm-tools</span></span><br><span class="line">$ sudo pacman -S open-vm-tools</span><br><span class="line"></span><br><span class="line"><span class="comment"># neovim</span></span><br><span class="line">$ sudo pacman -S neovim</span><br><span class="line"></span><br><span class="line"><span class="comment"># git</span></span><br><span class="line">$ sudo pacman -S git</span><br><span class="line">$ git config --global user.name <span class="string">&quot;gummybear&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;1955217284@qq.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 中文字体配置</span></span><br><span class="line">$ sudo pacman -S wqy-zenhei ttf-fireflysung</span><br><span class="line">$ sudo locale-gen</span><br></pre></td></tr></table></figure>
+
+<h2 id="03-pacman-常用命令"><a href="#03-pacman-常用命令" class="headerlink" title="03 pacman 常用命令"></a>03 pacman 常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">pacman -Rsncd abc              <span class="comment"># 删包和对应的依赖包，而且软件名称可以只输入主名称</span></span><br><span class="line">pacman -Sy abc                 <span class="comment"># 和源同步后安装名为abc的包</span></span><br><span class="line">pacman -S abc                  <span class="comment"># 从本地数据库中得到abc的信息，下载安装abc包</span></span><br><span class="line">pacman -Sf abc                 <span class="comment"># 强制安装包abc</span></span><br><span class="line">pacman -Ss abc                 <span class="comment"># 搜索有关abc信息的包</span></span><br><span class="line">pacman -Si abc                 <span class="comment"># 从数据库中搜索包abc的信息</span></span><br><span class="line">pacman -Syu                    <span class="comment"># 同步源，并更新系统</span></span><br><span class="line">pacman -Sy                     <span class="comment"># 仅同步源</span></span><br><span class="line">pacman -R abc                  <span class="comment"># 删除abc包</span></span><br><span class="line">pacman -Rc abc                 <span class="comment"># 删除abc包和依赖abc的包</span></span><br><span class="line">pacman -Rsn abc                <span class="comment"># 移除包所有不需要的依赖包并删除其配置文件</span></span><br><span class="line">pacman -Sc                     <span class="comment"># 清理/var/cache/pacman/pkg目录下的旧包</span></span><br><span class="line">pacman -Scc                    <span class="comment"># 清除所有下载的包和数据库</span></span><br><span class="line">pacman -Sd abc                 <span class="comment"># 忽略依赖性问题，安装包abc</span></span><br><span class="line">pacman -Su --ignore foo        <span class="comment"># 升级时不升级包foo</span></span><br><span class="line">pacman -Sg abc                 <span class="comment"># 查询abc这个包组包含的软件包</span></span><br><span class="line">pacman -Q                      <span class="comment"># 列出系统中所有的包</span></span><br><span class="line">pacman -Q package              <span class="comment"># 在本地包数据库搜索(查询)指定软件包</span></span><br><span class="line">pacman -Qi package             <span class="comment"># 在本地包数据库搜索(查询)指定软件包并列出相关信息</span></span><br><span class="line">pacman -Q | <span class="built_in">wc</span> -l              <span class="comment"># 统计当前系统中的包数量</span></span><br><span class="line">pacman -Qdt                    <span class="comment"># 找出孤立包</span></span><br><span class="line">pacman -Rs $(pacman -Qtdq)     <span class="comment"># 删除孤立软件包（递归的,小心用)</span></span><br><span class="line">pacman -U   abc.pkg.tar.gz     <span class="comment"># 安装下载的abs包，或新编译的本地abc包</span></span><br><span class="line">pacman-optimize &amp;&amp; <span class="built_in">sync</span>        <span class="comment"># 提高数据库访问速度</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/10/31/CNSS-Recurit-SA/" rel="next" title="CNSS_Recurit_SA.md">
+                <i class="fa fa-chevron-left"></i> CNSS_Recurit_SA.md
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/heart.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84-Archlinux-%E4%B8%96%E7%95%8C"><span class="nav-number">1.</span> <span class="nav-text">从零开始的 Archlinux 世界</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#00-%E5%BA%8F%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">00 序言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#01-Archlinux-%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">01 Archlinux 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#01x01-%E6%96%B9%E6%A1%88"><span class="nav-number">3.1.</span> <span class="nav-text">01x01 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x02-%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.</span> <span class="nav-text">01x02 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x03-%E5%88%86%E5%8C%BA"><span class="nav-number">3.3.</span> <span class="nav-text">01x03 分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x04-%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">3.4.</span> <span class="nav-text">01x04 修改镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x05-%E9%85%8D%E7%BD%AE-Fstab"><span class="nav-number">3.5.</span> <span class="nav-text">01x05 配置 Fstab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x06-Chroot"><span class="nav-number">3.6.</span> <span class="nav-text">01x06 Chroot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x07-%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA"><span class="nav-number">3.7.</span> <span class="nav-text">01x07 设置时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x08-%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80%E9%80%89%E9%A1%B9"><span class="nav-number">3.8.</span> <span class="nav-text">01x08 设置语言选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x09-%E9%85%8D%E7%BD%AE%E4%B8%BB%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%90%8D"><span class="nav-number">3.9.</span> <span class="nav-text">01x09 配置主机网络名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x09-%E8%AE%BE%E7%BD%AE-root-%E5%AF%86%E7%A0%81"><span class="nav-number">3.10.</span> <span class="nav-text">01x09 设置 root 密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x0A-%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%BC%95%E5%AF%BC%E5%B7%A5%E5%85%B7-grub-%EF%BC%8C%E5%B9%B6%E7%94%9F%E6%88%90%E5%BC%95%E5%AF%BC%E6%96%87%E4%BB%B6"><span class="nav-number">3.11.</span> <span class="nav-text">01x0A 安装系统引导工具 grub ，并生成引导文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x0B-%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C"><span class="nav-number">3.12.</span> <span class="nav-text">01x0B 配置网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01x0C-%E9%80%80%E5%87%BA%E9%87%8D%E5%90%AF"><span class="nav-number">3.13.</span> <span class="nav-text">01x0C 退出重启</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#02-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">02 基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#02x01-%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="nav-number">4.1.</span> <span class="nav-text">02x01 创建用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#02x02-%E9%85%8D%E7%BD%AE-sudo"><span class="nav-number">4.2.</span> <span class="nav-text">02x02 配置 sudo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#02x03-%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">4.3.</span> <span class="nav-text">02x03 安装常用的应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-pacman-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">03 pacman 常用命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Gumyy Bear</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
